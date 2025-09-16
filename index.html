@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Imperial Craft Studio — Quick Scan</title>
+  <meta name="description" content="Scan to view Imperial Craft Studio — portfolio, 360° view, drawings, site photos & contact." />
+  <link rel="icon" href="COMPANY-DETAILS.png">
+  <style>
+    :root{--accent:#0b6;--muted:#666}
+    *{box-sizing:border-box}
+    body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0; color:#111;background:#fafafa}
+    header{background:linear-gradient(90deg,#0b6a4a22,#0b6a4a11);padding:20px}
+    .wrap{max-width:980px;margin:0 auto;padding:18px}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo img{width:64px;height:64px;border-radius:12px;object-fit:cover}
+    h1{margin:0;font-size:20px}
+    p.lead{margin:6px 0 0;color:var(--muted)}
+    nav{margin-top:12px;display:flex;gap:8px;flex-wrap:wrap}
+    .btn{padding:8px 12px;border-radius:10px;background:#fff;border:1px solid #eee;cursor:pointer;text-decoration:none;color:#111;font-weight:600;box-shadow:0 6px 18px rgba(11,106,74,0.06)}
+    section{margin-top:24px}
+    .card{background:#fff;border-radius:12px;padding:16px;border:1px solid #f0f0f0;box-shadow:0 4px 12px rgba(0,0,0,0.03)}
+    .meta{font-size:14px;color:var(--muted)}
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;margin-top:12px}
+    .grid img{width:100%;height:160px;object-fit:cover;border-radius:8px;cursor:pointer}
+    iframe{width:100%;height:420px;border:0;border-radius:10px;margin-top:12px}
+    footer{margin:40px 0;color:var(--muted);font-size:13px}
+    .files a{display:block;padding:8px 10px;border-radius:8px;margin-bottom:8px;background:#fafafa;border:1px dashed #ccc;text-decoration:none;color:#111}
+    .contact-card{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center}
+    .qr{width:120px;height:120px;background:#fff;border:1px solid #eee;display:flex;align-items:center;justify-content:center;border-radius:8px}
+    .modal{position:fixed;inset:0;background:rgba(0,0,0,0.6);display:none;align-items:center;justify-content:center;padding:20px}
+    .modal .imgwrap{max-width:900px;width:100%}
+    .modal img{width:100%;height:auto;border-radius:10px}
+    .close{position:absolute;top:18px;right:18px;background:#fff;border-radius:50%;width:36px;height:36px;display:flex;align-items:center;justify-content:center;cursor:pointer}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <div class="brand">
+        <div class="logo"><img src="COMPANY-DETAILS.png" alt="Company Logo"></div>
+        <div>
+          <h1>Imperial Craft Studio</h1>
+          <p class="lead">We design spaces that hold your memories — Interior Design & Turnkey Projects</p>
+        </div>
+      </div>
+      <nav>
+        <a class="btn" href="#portfolio">Portfolio</a>
+        <a class="btn" href="#view360">360° View</a>
+        <a class="btn" href="#drawings">Drawings</a>
+        <a class="btn" href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+
+    <section id="portfolio" class="card">
+      <h2>Portfolio</h2>
+      <p class="meta">Preview of selected projects</p>
+      <div class="grid">
+        <img src="images/portfolio1.jpg" alt="Portfolio sample" onclick="openModal(this.src)">
+        <img src="images/portfolio2.jpg" alt="Portfolio sample" onclick="openModal(this.src)">
+        <img src="images/portfolio3.jpg" alt="Portfolio sample" onclick="openModal(this.src)">
+      </div>
+      <a class="btn" href="files/PORTFOLIO-IMPERIAL.pdf" download style="margin-top:12px;display:inline-block">Download Full Portfolio (PDF)</a>
+    </section>
+
+    <section id="view360" class="card">
+      <h2>360° Virtual Tours</h2>
+      <p class="meta">Explore our work in 360°</p>
+      <iframe src="https://tour.panoee.net/680b8a601f2a83033a3728d2/686015f9dbecccc83ac33456"></iframe>
+      <iframe src="https://tour.panoee.net/68490915d30933d513212627/684909c4d30933b99a212634"></iframe>
+      <iframe src="https://tour.panoee.net/6863c70c001c8406fc931131/6863c793001c848536931145"></iframe>
+    </section>
+
+    <section id="drawings" class="card">
+      <h2>Drawings & Documents</h2>
+      <p class="meta">Project floorplans, elevations, and estimates</p>
+      <div class="files">
+        <a href="files/DRAWINGS-PDF.pdf" download>Complete Drawings Package (PDF)</a>
+      </div>
+    </section>
+
+    <section id="contact" class="card">
+      <h2>Contact Us</h2>
+      <div class="contact-card">
+        <div>
+          <div style="font-weight:700">Imperial Craft Studio</div>
+          <div class="meta">A-1111, Moneyplant Highstreet,<br>Near Ganesh Glory 11,<br>Jagatpur Road SG Highway, Ahmedabad. 382470</div>
+          <div class="meta">📞 +91 70431 73673 | +91 99250 12319</div>
+          <div class="meta">✉️ info@imperialcraft.example</div>
+          <a class="btn" href="files/ImperialCraft.vcf" download style="margin-top:8px">Save Contact (vCard)</a>
+        </div>
+        <div class="qr">QR</div>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2025 Imperial Craft Studio — Radhe & Bhavik</p>
+    </footer>
+  </main>
+
+  <div id="modal" class="modal" onclick="closeModal()">
+    <div class="imgwrap"><img id="modalImg" src=""></div>
+    <div class="close" onclick="closeModal();event.stopPropagation()">✕</div>
+  </div>
+
+  <script>
+    function openModal(src){
+      var modal=document.getElementById('modal');
+      var img=document.getElementById('modalImg');
+      img.src=src;modal.style.display='flex';
+    }
+    function closeModal(){document.getElementById('modal').style.display='none';}
+    document.addEventListener('keydown',function(e){if(e.key==='Escape')closeModal();});
+  </script>
+</body>
+</html>
